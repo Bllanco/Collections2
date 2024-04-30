@@ -1,0 +1,26 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollectionManagementSystem.EditCollectionPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ListView x:Name="ItemsListView" Grid.Row="0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout Grid.Row="1" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="End" Spacing="10">
+            <Button Text="Edytuj wybrany element" Clicked="OnItemEdited" BackgroundColor="#FF968A"/>
+            <Button Text="Dodaj nowy element" Clicked="OnAddItemClicked" BackgroundColor="#FF968A"/>
+            <Button Text="Usuń wybrany element" Clicked="OnItemDeleted" BackgroundColor="#FF968A"/>
+        </StackLayout>
+
+    </Grid>
+
+</ContentPage>

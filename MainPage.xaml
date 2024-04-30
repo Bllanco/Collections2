@@ -1,0 +1,27 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CollectionManagementSystem.MainPage">
+
+    <StackLayout>
+        <!-- Nazwa listy -->
+        <Label Text="Lista kolekcji" FontSize="Large" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+
+        <!-- Lista kolekcji -->
+        <ListView x:Name="CollectionsListView" SelectionMode="Single" ItemSelected="OnCollectionSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!-- Przycisk do dodawania nowej kolekcji -->
+        <Button Text="Dodaj Kolekcję" Clicked="OnAddCollectionClicked" BackgroundColor="#FFC5BF" HorizontalOptions="FillAndExpand"/>
+
+        <!-- Przycisk odpowiadający za usuwanie kolekcji -->
+        <Button Text="Usuń kolekcję" Clicked="OnDeleteCollectionClicked" BackgroundColor="#FF968A" HorizontalOptions="FillAndExpand"/>
+    </StackLayout>
+</ContentPage>

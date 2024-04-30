@@ -1,0 +1,1 @@
+C:\Users\marta\Desktop\CollectionManagementSystem\CollectionManagementSystem\CollectionManagementSystem.csproj;x64
